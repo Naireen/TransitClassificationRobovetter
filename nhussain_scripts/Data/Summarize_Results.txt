@@ -1,0 +1,32 @@
+For a training set of 0.5%, when testing on the KOIS, the results were, with a SNR cut of 6:
+
+Precsion 1.0
+Recall 0.949019607843
+F1 - score 0.97384305835
+
+#####
+
+For a training set of 1% or larger, the precision and recall is always 1 with an SNR cut of 6. 
+
+#####
+
+For a training set of 0.5%, testing on the KOIs, and a SNR cut of 3.
+Precision  1.0
+Recall 0.998039215686
+F1 - score 0.999018645731
+
+#####
+
+For a training set of 0.4%, testing on KOIs, SNR cut o f3
+Precision = 1.0
+Rcall 0.998039215686
+F1 - score 0.999018645731
+
+####
+
+For a training set of 0.4% testing On KOIS, no SNR cut (all injected transits were labeled as true)
+When predicting on the 99.6% of the initial dataset, the model caught all the transits, and hadd 22 false positives (inverted signals)
+Precision = 1
+Recall 0.998039215686
+F1 - score 0.999018645731
+

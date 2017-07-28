@@ -1,0 +1,48 @@
+Calculating_Period_Distances 
+----------------------------
+Calculate the period difference between teh true (injected) period and the period detected by BLS. This si done by checking which constants a and b minimize the expression a*p_true - b*p_bls / (0.5*(a*p_true + b*p_bls)). Also check the error of these values, when using an interger grid from 1 to 5. This is done for both the kois and injected signals.
+
+
+Calculating_SNR
+--------------
+Calculate the SNR for the injected signals. This was done by calculating the signal by taking the depth of the transit , multiplying it by the square root of the number of transits in the time series and by the sqare root of the number of points present in a transit, divided by the noise. THe noise is defined by taking the rms of the distance of all the points to the median of the light curve. 
+
+ 
+Cleaned_Model
+------------
+A cleaned up notebook of the XGB model, loading all the data from csvs files (rather than generating it from the data directories, and testing on the kois)
+
+
+Creating_KOI_SNR
+----------------
+Creates the KOI SNR values. The order in which these values are generated determine the order other koi values are populated, eg the period and the data files. 
+
+
+Debug_Modshiftval4_Values
+-------------------------
+Some of the red noise values were nan's, which was due to forgetting to take the absolute value 
+
+
+DoubleCheck_XGBoost_Score
+-------------------------
+In ReadBLSFeats , the xgb model performs unusually well. This is just double checking that there was no error. Some decision trees were visuallized to see what was wrong with the model.
+
+
+GenFeats
+--------
+Generate modshiftvals from the original detrended light curves.
+
+
+Put_koi_feat_files_in_Correct_Order
+-----------------------------------
+Regenerating the csv file for the koi objects, wnsuring that they are in the same order as the SNR koi file was generated
+
+
+Random_Period_Distribution
+--------------------------
+Checking the distribution of the period distribution to check for contamination (how many signals havae a tolerance greater than the threshold. )
+
+
+Read_BLSFeats
+-------------
+First run of the model, without hyperopt tuning. 
